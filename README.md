@@ -30,4 +30,4 @@ Os dados relacionados às características de GC das empresas brasileiras de cap
 
 ## Contribuições
 
-Contribuições são bem-vindas! Se você tiver sugestões de melhorias ou identificar problemas, abra uma *issue*** ou envie um *pull request***.
+Contribuições são bem-vindas! Se você tiver sugestões de melhorias ou identificar problemas, abra uma *issue* ou envie um *pull request*.
