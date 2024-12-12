@@ -26,7 +26,7 @@ Os dados brutos são periodicamente convertidos e fornecidos em um [website](htt
   - E-mail: simone.fonseca@ufop.edu.br
   - Doutora em Administração (Finanças)
 
-- **Yuri Fonseca Lopes**  
+- **[Yuri Lopes](http://lattes.cnpq.br/1281498889191276)**  
   - Aluno de graduação em Engenharia Mecatrônica (UFSJ)  
   - E-mail: yuri.fnsc.lopes@gmail.com
   - Graduando em Engenharia Mecatrônica (UFSJ)
