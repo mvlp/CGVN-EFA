@@ -5,7 +5,7 @@ Este repositório contém o código fonte utilizado para replicar os resultados 
 Os dados relacionados às características de GC das empresas brasileiras de capital aberto utilizados na estimação dos índices foram coletados do Informe do Código de Governança (ICBGC). Um documento eletrônico de respostas das companhias a um questionário padrão e de encaminhamento periódico previsto no artigo 32 da Resolução CVM nº 80, em conformidade com o estabelecido pela instituição. Essas respostas foram coletadas por meio do [portal de dados abertos](https://dados.cvm.gov.br/dataset/cia_aberta-doc-cgvn) da CVM. 
 
 ## Site
-Os dados brutos são periodicamente convertidos e fornecidos em um [*website*](https://mvlp.github.io/celta/#/governance) além da disponibilização de índices de governança corporativa (IGCs), estatísticas, gráficos e planilhas.
+Os dados brutos são periodicamente convertidos e fornecidos em um [*website*](https://mvlp.github.io/celta/#/governance) além da disponibilização de Índices de Governança Corporativa (IGCs), estatísticas, gráficos e planilhas.
 
 ## Código Fonte (EM CONSTRUÇÃO)
 
