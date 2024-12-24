@@ -32,6 +32,10 @@ Os dados brutos são periodicamente consolidados e fornecidos em um [*website*](
   - E-mail: yuri.fnsc.lopes@gmail.com
   - Graduando em Engenharia Mecatrônica (UFSJ)
 
+## Apoio
+
+Os autores agradecem pelo financiamento de pesquisa feito pela Fundação de Amparo à Pesquisa do Estado de Minas Gerais (FAPEMIG, CHAMADA FAPEMIG 01/2022, DEMANDA UNIVERSAL, APQ-02135-22).
+
 ## Contribuições
 
 Contribuições são bem-vindas! Se você tiver sugestões de melhorias ou identificar problemas, abra uma *issue* ou envie um *pull request*.
