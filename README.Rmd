@@ -1,3 +1,8 @@
+---
+title: "README"
+output: github_document
+---
+
 # CGVN-EFA
 Este repositório contém o código fonte utilizado para replicar os resultados do artigo científico **["Sete Dimensões da Governança Corporativa no Brasil: Índices e Disponibilização de Dados"](https://www.researchgate.net/publication/386986331_Sete_Dimensoes_da_Governanca_Corporativa_no_Brasil_Indices_e_Disponibilizacao_de_Dados)**. O código foi desenvolvido em R e inclui scripts para análise de dados, estatísticas e visualizações.
 
@@ -9,6 +14,13 @@ Os dados brutos são periodicamente consolidados e fornecidos em um [*website*](
 ![image](https://github.com/user-attachments/assets/ddcbb61d-a05a-4fb9-8451-df3bc64d8049)
 
 ## Código Fonte (EM CONSTRUÇÃO)
+```{r}
+# Gerando uma matriz de dados qualquer
+dados <- matrix(rnorm(100), ncol = 5)
+
+# Mostrando a matriz de correlação
+cor(dados)
+```
 
 ## Autores
 
