@@ -38,7 +38,7 @@ disponibilização de Índices de Governança Corporativa (IGCs),
 estatísticas, gráficos e planilhas.
 ![image](https://github.com/user-attachments/assets/ddcbb61d-a05a-4fb9-8451-df3bc64d8049)
 
-## Código Fonte (EM CONSTRUÇÃO)
+## Código Fonte
 ### O que este repositório oferece
 
 - **Dados consolidados** do ICBGC de 495 empresas (out/2018–nov/2024) em formato `.xlsx`, prontos para uso.
