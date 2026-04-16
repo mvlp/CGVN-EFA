@@ -1,7 +1,14 @@
-README
-================
-
 # CGVN-EFA
+
+[![R](https://img.shields.io/badge/R-%3E%3D4.2-blue)](https://www.r-project.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![FAPEMIG](https://img.shields.io/badge/Financiamento-FAPEMIG%2001%2F2022-green)](https://fapemig.br/)
+
+> Pereira, M. V. L.; Martucheli, C. T.; Fonseca, S. E.; Lopes, Y. F. (2024).  
+> *Sete Dimensões da Governança Corporativa no Brasil: Índices e Disponibilização de Dados.*  
+> II Congresso Interinstitucional de Contabilidade e Controladoria (CINCO 2024).
+
+---
 
 Este repositório contém o código fonte utilizado para replicar os
 resultados do artigo científico **[“Sete Dimensões da Governança
