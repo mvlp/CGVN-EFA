@@ -1,60 +1,85 @@
-# CGVN-EFA
+# CGVN-EFA — Governança Corporativa no Brasil: Índices e Dados
 
 [![R](https://img.shields.io/badge/R-%3E%3D4.2-blue)](https://www.r-project.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![FAPEMIG](https://img.shields.io/badge/Financiamento-FAPEMIG%2001%2F2022-green)](https://fapemig.br/)
+[![ResearchGate](https://img.shields.io/badge/Artigo-ResearchGate-00CCBB)](https://www.researchgate.net/publication/386986331_Sete_Dimensoes_da_Governanca_Corporativa_no_Brasil_Indices_e_Disponibilizacao_de_Dados)
 
-> Pereira, M. V. L.; Martucheli, C. T.; Fonseca, S. E.; Lopes, Y. F. (2024).  
+> **Pereira, M. V. L.; Martucheli, C. T.; Fonseca, S. E.; Lopes, Y. F. (2024).**  
 > *Sete Dimensões da Governança Corporativa no Brasil: Índices e Disponibilização de Dados.*  
-> II Congresso Interinstitucional de Contabilidade e Controladoria (CINCO 2024).
+> II Congresso Interinstitucional de Contabilidade e Controladoria — CINCO 2024.  
+> 📄 [Acesse o artigo completo no ResearchGate](https://www.researchgate.net/publication/386986331_Sete_Dimensoes_da_Governanca_Corporativa_no_Brasil_Indices_e_Disponibilizacao_de_Dados)
+
+---
+
+## Sumário
+
+- [Sobre o projeto](#sobre-o-projeto)
+- [Website e dados consolidados](#website-e-dados-consolidados)
+- [Fonte dos dados](#fonte-dos-dados)
+- [Os sete IGCs](#os-sete-igcs)
+- [Estrutura do repositório](#estrutura-do-repositório)
+- [Instalação](#instalação)
+- [Como usar](#como-usar)
+- [Reprodução dos resultados](#reprodução-dos-resultados)
+- [Metodologia resumida](#metodologia-resumida)
+- [Como citar](#como-citar)
+- [Referências](#referências)
+- [Financiamento e contato](#financiamento-e-contato)
 
 ---
 
 ## Sobre o projeto
 
-Este repositório contém o código fonte utilizado para replicar os
-resultados do artigo científico **[“Sete Dimensões da Governança
-Corporativa no Brasil: Índices e Disponibilização de
-Dados”](https://www.researchgate.net/publication/386986331_Sete_Dimensoes_da_Governanca_Corporativa_no_Brasil_Indices_e_Disponibilizacao_de_Dados)**.
-O código foi desenvolvido em R e inclui scripts para análise de dados,
-estatísticas e visualizações.
+Este repositório disponibiliza o **código-fonte em R** para replicação completa dos resultados do artigo científico, incluindo:
 
-## Dados
+- **Dados consolidados** do Informe sobre o Código Brasileiro de Governança Corporativa (ICBGC) de 495 empresas brasileiras de capital aberto (out/2018–nov/2024), prontos para uso em pesquisa.
+- **Sete Índices de Governança Corporativa (IGCs)** construídos via Análise Fatorial Exploratória (AFE) e Algoritmos Genéticos — metodologicamente robustos, não correlacionados entre si e de fácil replicação.
+- **Scripts reprodutíveis** que geram todas as tabelas e figuras do artigo a partir dos dados brutos da CVM.
 
-Os dados relacionados às características de GC das empresas brasileiras
-de capital aberto utilizados na estimação dos índices foram coletados do
-Informe do Código de Governança (ICBGC). Um documento eletrônico de
-respostas das companhias a um questionário padrão e de encaminhamento
-periódico previsto no artigo 32 da Resolução CVM nº 80, em conformidade
-com o estabelecido pela instituição. Essas respostas foram coletadas por
-meio do [Portal de Dados
-Abertos](https://dados.cvm.gov.br/dataset/cia_aberta-doc-cgvn) da CVM.
+A motivação central do projeto é suprir uma lacuna identificada na literatura brasileira: a ausência de índices de GC **gratuitos, contínuos e acessíveis** para pesquisadores, investidores e gestores.
 
-## Site
+---
 
-Os dados brutos são periodicamente consolidados e fornecidos em um
-[*website*](https://mvlp.github.io/celta/#/governance) além da
-disponibilização de Índices de Governança Corporativa (IGCs),
-estatísticas, gráficos e planilhas.
-![image](https://github.com/user-attachments/assets/ddcbb61d-a05a-4fb9-8451-df3bc64d8049)
+## Website e dados consolidados
 
-## Código Fonte
-### O que este repositório oferece
+Os dados brutos são periodicamente consolidados e disponibilizados em um **website interativo**, junto com os IGCs calculados, estatísticas descritivas, gráficos de evolução temporal e planilhas para download.
 
-- **Dados consolidados** do ICBGC de 495 empresas (out/2018–nov/2024) em formato `.xlsx`, prontos para uso.
-- **Sete Índices de Governança Corporativa (IGCs)** construídos a partir de Análise Fatorial Exploratória (AFE) e Algoritmos Genéticos:
+🌐 **Acesse em: [mvlp.github.io/celta/#/governance](https://mvlp.github.io/celta/#/governance)**
 
-| Sigla | Dimensão                        | Fator |
-|-------|---------------------------------|-------|
-| CC    | Controles e Compliance          | 1     |
-| REG   | Regulações Estatutárias         | 2     |
-| ADM   | Conselho de Administração       | 3     |
-| DIR   | Diretoria                       | 4     |
-| SEM   | Sociedades de Economia Mista    | 5     |
-| DEF   | Medidas de Defesa               | 6     |
-| FIS   | Conselho Fiscal                 | 7     |
+![Screenshot do website CGVN](https://github.com/user-attachments/assets/ddcbb61d-a05a-4fb9-8451-df3bc64d8049)
 
-- **Scripts reprodutíveis** para replicar todos os resultados do artigo.
+---
+
+## Fonte dos dados
+
+Os dados utilizados na construção dos IGCs são extraídos do **Informe sobre o Código Brasileiro de Governança Corporativa (ICBGC)** — documento eletrônico de encaminhamento periódico anual previsto no artigo 32 da **Resolução CVM nº 80**. Por meio dele, as companhias abertas listadas na B³ reportam sua adesão a 54 práticas recomendadas pelo IBGC, respondendo "Sim", "Não", "Parcialmente" ou "Não se Aplica".
+
+📂 **Fonte:** [Portal de Dados Abertos da CVM](https://dados.cvm.gov.br/dataset/cia_aberta-doc-cgvn)
+
+| Característica       | Valor                                   |
+|----------------------|-----------------------------------------|
+| Empresas             | 495 (listadas e não listadas na B³)     |
+| Documentos           | 2.294 informes                          |
+| Período              | Outubro de 2018 a Novembro de 2024      |
+| Práticas avaliadas   | 54 (variáveis)                          |
+| Razão obs./variáveis | 42:1                                    |
+
+---
+
+## Os sete IGCs
+
+A AFE identificou sete dimensões latentes da GC nas empresas brasileiras. Os IGCs são índices compostos com pesos `{-1, 0, +1}`, normalizados na escala **[0, 10]**, e validados como não correlacionados entre si (correlação máxima entre pares: **0,048**).
+
+| # | Sigla | Dimensão                        | Correlação com o fator |
+|---|-------|---------------------------------|------------------------|
+| 1 | **CC**  | Controles e Compliance          | 0,812                  |
+| 2 | **REG** | Regulações Estatutárias         | 0,812                  |
+| 3 | **ADM** | Conselho de Administração       | 0,704                  |
+| 4 | **DIR** | Diretoria                       | 0,736                  |
+| 5 | **SEM** | Sociedades de Economia Mista    | 0,684                  |
+| 6 | **DEF** | Medidas de Defesa               | 0,849                  |
+| 7 | **FIS** | Conselho Fiscal                 | 0,879                  |
 
 ---
 
@@ -62,145 +87,187 @@ estatísticas, gráficos e planilhas.
 
 ```
 CGVN-EFA/
+│
+├── scripts/
+│   ├── script_CGVN_EFA_github.R    # Script 1 — Estatísticas descritivas + AFE
+│   └── script_GA_scale.R           # Script 2 — Construção dos IGCs via AG
+│
 ├── data/
 │   ├── dataset_CGVN.RData          # Dataset processado (gerado por script_get_data.R)
-│   ├── input_GA_scale.RData        # Entrada para o AG (gerado pelo script EFA)
+│   ├── input_GA_scale.RData        # Saída do Script 1, entrada do Script 2
 │   ├── scale_CINCO2024.RData       # Solução publicada no artigo (IGCs finais)
-│   └── loading_cut_off.csv         # Tabela de limiares de carga (Hair et al., 2014)
+│   └── loading_cut_off.csv         # Limiares de carga fatorial (Hair et al., 2014)
+│
 ├── figs/                           # Gráficos gerados (PDF/PNG)
-├── script_CGVN_EFA.R        # Script 1: estatísticas descritivas + AFE
-├── script_GA_scale.R               # Script 2: otimização dos IGCs via AG
+│
 └── README.md
 ```
 
 ---
 
-## Pré-requisitos
+## Instalação
 
-### R (versão ≥ 4.2)
+### 1. Baixe o repositório
 
-Instale todos os pacotes necessários de uma vez:
-
-```r
-install.packages(c(
-  "tibble", "dplyr", "tidyr",      # manipulação de dados
-  "ggplot2", "zoo", "lubridate",   # visualização e séries temporais
-  "extrafont",                     # fontes para exportação em LaTeX
-  "fBasics",                       # estatísticas descritivas
-  "psych",                         # AFE, escores fatoriais, Alpha de Cronbach
-  "EFAtools",                      # KMO, Bartlett, N_FACTORS
-  "ppcor",                         # correlações parciais
-  "GA"                             # algoritmos genéticos
-))
-```
-
-> **Nota sobre fontes LaTeX:** Para usar a fonte CM Roman nos gráficos (padrão do artigo), execute `font_import()` do pacote `extrafont` uma vez após a instalação. Caso prefira não usar essa fonte, altere `flag_font_latex = FALSE` nas chamadas das funções de gráfico.
-
----
-
-## Como usar
-
-### Passo 1 — Clone o repositório
+**Se você usa Git:**
 
 ```bash
 git clone https://github.com/mvlp/CGVN-EFA.git
 cd CGVN-EFA
 ```
 
-### Passo 2 — Execute o Script 1 (AFE)
+**Se você não usa Git (mais simples):** clique no botão verde **`<> Code`** no topo desta página e depois em **`Download ZIP`**. Extraia a pasta onde preferir e abra os scripts diretamente no RStudio — não é necessário nenhum comando.
 
-Abra o RStudio e execute `script_CGVN_EFA.R` com **Ctrl+Shift+S** (Source).
+### 2. Instale os pacotes R necessários
 
-Este script realiza, em ordem:
+Abra o R ou RStudio e execute:
 
-1. **Carrega os dados** do ICBGC (`data/dataset_CGVN.RData`)
-2. **Tabela 1** — Frequência das respostas por prática e capítulo
-3. **Figuras 1–2** — Evolução temporal das respostas (salvas em `figs/`)
-4. **Tabela 2** — Estatísticas descritivas + KMO individual + Bartlett por capítulo
-5. **KMO global** (0,928) e **Bartlett global** (χ²=60.094,91, p<0,001)
-6. **AFE com rotação varimax** — 7 fatores (**Tabela 3**)
-7. Exporta `data/input_GA_scale.RData` para o Script 2
+```r
+install.packages(c(
+  # Manipulação de dados
+  "tibble", "dplyr", "tidyr",
+  # Visualização e séries temporais
+  "ggplot2", "zoo", "lubridate",
+  # Exportação com fontes LaTeX
+  "extrafont",
+  # Estatísticas descritivas
+  "fBasics",
+  # Análise fatorial e confiabilidade
+  "psych",
+  # KMO, Bartlett e critérios de retenção de fatores
+  "EFAtools",
+  # Correlações parciais
+  "ppcor",
+  # Algoritmos genéticos
+  "GA"
+))
+```
 
-### Passo 3 — Execute o Script 2 (Algoritmo Genético)
-
-Abra e execute `script_GA_scale.R` com **Ctrl+Shift+S**.
-
-Este script realiza:
-
-1. **Carrega** os resultados da AFE (`data/input_GA_scale.RData`)
-2. **Diagnóstico da solução inicial** (warm-start baseado na maior carga por fator)
-3. **Otimização via Algoritmo Genético** → produz os 7 IGCs finais
-4. **Tabela 4** — Pesos dos IGCs, correlações entre IGCs e correlações IGC × fatores
-5. **Alpha de Cronbach** — confiabilidade de cada IGC
-6. **Gráficos temporais** de cada IGC (salvo em `figs/`)
-
-> 💡 **Reproduzindo os resultados do artigo:** Por padrão, `FLAG_LOAD_SCALE_CINCO2024 = TRUE` carrega a solução exata publicada no artigo, reproduzindo a Tabela 4 instantaneamente.  
-> Para rodar o AG do zero, altere para `FLAG_LOAD_SCALE_CINCO2024 = FALSE`. Atenção: a execução pode levar horas dependendo do hardware.
+> **Sobre fontes LaTeX:** Os gráficos usam a fonte "CM Roman" por padrão para compatibilidade com LaTeX. Para instalá-la, execute `extrafont::font_import()` uma vez após a instalação dos pacotes. Caso prefira não usá-la, passe `flag_font_latex = FALSE` nas chamadas às funções de gráfico dentro dos scripts.
 
 ---
 
-## Reprodução dos resultados principais
+## Como usar
 
-A tabela abaixo resume os resultados esperados e onde encontrá-los no artigo:
+Os dois scripts devem ser executados **em ordem**. O Script 1 gera um arquivo intermediário (`.RData`) que alimenta o Script 2.
 
-| Resultado                        | Script   | Seção do artigo | Saída esperada                                      |
-|----------------------------------|----------|-----------------|-----------------------------------------------------|
-| Frequência das respostas         | Script 1 | Seção 4.1 / Tab. 1 | Tabela impressa no console por capítulo           |
-| Gráficos de evolução             | Script 1 | Figura 1–2      | PDFs em `figs/p1_*.pdf` e `figs/p2_*.pdf`         |
-| Estatísticas descritivas         | Script 1 | Seção 4.2 / Tab. 2 | Tabela com média, desvio, KMO, etc. por variável  |
-| KMO global                       | Script 1 | Seção 4.3.1     | `0.928` (overall)                                  |
-| Bartlett                         | Script 1 | Seção 4.3.1     | χ²(1431) = 60.094,91, p < 0,001                    |
-| Matriz de cargas varimax         | Script 1 | Seção 4.3.3 / Tab. 3 | 7 fatores, 43,69% de variância explicada      |
-| Pesos e correlações dos IGCs     | Script 2 | Seção 4.3.4 / Tab. 4 | Correlação máxima entre IGCs: 0,048            |
-| Correlação IGC × fator           | Script 2 | Seção 4.3.5 / Tab. 4 | Correlações > 0,68 com o fator correspondente  |
-| Alpha de Cronbach                | Script 2 | —               | Impresso no console por IGC                        |
-| Gráficos dos IGCs                | Script 2 | —               | PDFs em `figs/scale_*.pdf`                         |
+### Script 1 — `scripts/script_CGVN_EFA_github.R`
+
+**O que faz:** carrega e processa os dados do ICBGC, gera estatísticas descritivas, gráficos de evolução temporal e realiza a Análise Fatorial Exploratória (AFE) com rotação varimax.
+
+**Como executar:** abra o arquivo no RStudio e pressione **Ctrl+Shift+S** (Source).
+
+| Etapa | O que acontece | Saída |
+|-------|---------------|-------|
+| Carregamento | Lê `data/dataset_CGVN.RData` | — |
+| Análise por capítulo | Calcula frequência de respostas por prática | **Tabela 1** no console |
+| Gráficos temporais | Evolução trimestral das respostas por capítulo | PDFs em `figs/p1_*.pdf` e `figs/p2_*.pdf` |
+| Estatísticas descritivas | Média, desvio, KMO individual, curtose etc. | **Tabela 2** no console |
+| Adequação da amostra | KMO global e teste de Bartlett | Impressos no console |
+| AFE varimax (7 fatores) | Cargas fatoriais e comunalidades | **Tabela 3** no console |
+| Exportação | Prepara entrada para o Script 2 | `data/input_GA_scale.RData` |
+
+---
+
+### Script 2 — `scripts/script_GA_scale.R`
+
+**O que faz:** constrói os 7 IGCs finais resolvendo um problema de otimização combinatória via Algoritmo Genético — encontra os pesos `{-1, 0, +1}` que tornam os índices ao mesmo tempo fiéis aos fatores da AFE e não correlacionados entre si.
+
+**Como executar:** abra o arquivo no RStudio e pressione **Ctrl+Shift+S** (Source).
+
+| Etapa | O que acontece | Saída |
+|-------|---------------|-------|
+| Carregamento | Lê `data/input_GA_scale.RData` | — |
+| Diagnóstico inicial | Avalia o warm-start (solução pré-AG) | Correlações no console |
+| Otimização (AG) | Busca os pesos ótimos `{-1, 0, +1}` | *(ver nota abaixo)* |
+| Resultados | Pesos, correlações entre IGCs e entre IGCs × fatores | **Tabela 4** no console |
+| Confiabilidade | Alpha de Cronbach por IGC | Impresso no console |
+| Gráficos dos IGCs | Evolução trimestral de cada índice | PDFs em `figs/scale_*.pdf` |
+
+> 💡 **Reproduzindo o artigo vs. rodando do zero:**
+>
+> O parâmetro `FLAG_LOAD_SCALE_CINCO2024` no início do script controla o modo de operação:
+>
+> ```r
+> FLAG_LOAD_SCALE_CINCO2024 = TRUE   # (padrão) carrega a solução exata do artigo
+> FLAG_LOAD_SCALE_CINCO2024 = FALSE  # roda o AG do zero (pode levar horas)
+> ```
+>
+> Mantenha `TRUE` para reproduzir instantaneamente a Tabela 4. Altere para `FALSE` apenas se quiser explorar soluções alternativas — o AG é estocástico e pode gerar resultados ligeiramente diferentes mesmo com semente fixa, dependendo do hardware e das versões dos pacotes.
+
+---
+
+## Reprodução dos resultados
+
+A tabela abaixo lista os resultados numéricos reportados no artigo e como verificá-los:
+
+| Resultado | Script | Referência no artigo | Valor esperado |
+|-----------|--------|----------------------|----------------|
+| Razão obs./variáveis | 1 | Seção 3.1 | 42:1 (N=2.294, M=54) |
+| KMO global | 1 | Seção 4.3.1 | **0,928** |
+| Teste de Bartlett | 1 | Seção 4.3.1 | χ²(1431) = 60.094,91; p < 0,001 |
+| Limiar de carga significativa | 1 | Seção 3.3.4, Eq. (1) | **≈ 0,123** (para N=2.294) |
+| Número de fatores retidos | 1 | Seção 4.3.2 | **7** (solução mais parcimoniosa) |
+| Variância explicada total | 1 | Seção 4.3.3 / Tab. 3 | **43,69%** |
+| Autovalores (F1–F7) | 1 | Tab. 3 | 7,54; 3,82; 3,71; 2,34; 2,30; 2,18; 1,71 |
+| Correlação máxima entre IGCs | 2 | Seção 4.3.5 / Tab. 4 | **0,048** (DIR–CC) |
+| Correlação mínima IGC × fator | 2 | Seção 4.3.5 / Tab. 4 | **0,684** (SEM–Fator5) |
 
 ---
 
 ## Metodologia resumida
 
 ```
-Dados ICBGC (CVM)
-       │
-       ▼
-Conversão qualitativo → quantitativo
-  "Não se Aplica"=0 │ "Não"=1 │ "Parcialmente"=2 │ "Sim"=3
-       │
-       ▼
-Testes de adequação (KMO e Bartlett)
-  KMO global = 0,928 ✓  │  Bartlett: p < 0,001 ✓
-       │
-       ▼
-Análise Fatorial Exploratória (AFE)
-  Método:   fatores comuns (psych::fa)
-  Rotação:  varimax
-  Fatores:  7 (selecionados entre soluções de 4, 6, 7 e 9)
-       │
-       ▼
-Otimização por Algoritmo Genético
-  Cromossomo: pesos ∈ {-1, 0, +1} por variável × fator
-  Objetivo:   min [ ||corr(S)-I||² + ||corr(S,F)-corr(F)||² ]
-  Restrição:  cada variável entra em no máximo 1 IGC
-       │
-       ▼
-7 IGCs validados (CC, REG, ADM, DIR, SEM, DEF, FIS)
-  Correlação máxima entre IGCs: 0,048
-  Correlação mínima IGC × fator: 0,684
+┌─────────────────────────────────────────────────────────────────┐
+│  DADOS  →  Portal de Dados Abertos CVM (ICBGC)                 │
+│             495 empresas │ 2.294 informes │ 54 práticas         │
+└───────────────────────────────┬─────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  CONVERSÃO  →  Qualitativo para numérico                        │
+│   "Não se Aplica"=0 │ "Não"=1 │ "Parcialmente"=2 │ "Sim"=3     │
+└───────────────────────────────┬─────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  ADEQUAÇÃO  →  KMO (0,928) e Bartlett (p < 0,001)  ✓           │
+└───────────────────────────────┬─────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  AFE  →  psych::fa() │ rotação varimax │ 7 fatores              │
+│          variância explicada: 43,69%                            │
+│                                                                 │
+│   Fator 1: Controles e Compliance (CC)                          │
+│   Fator 2: Regulações Estatutárias (REG)                        │
+│   Fator 3: Conselho de Administração (ADM)                      │
+│   Fator 4: Diretoria (DIR)                                      │
+│   Fator 5: Sociedades de Economia Mista (SEM)                   │
+│   Fator 6: Medidas de Defesa (DEF)                              │
+│   Fator 7: Conselho Fiscal (FIS)                                │
+└───────────────────────────────┬─────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  OTIMIZAÇÃO  →  Algoritmo Genético (GA)                         │
+│                                                                 │
+│  Cromossomo: pesos ∈ {-1, 0, +1} por variável × fator          │
+│                                                                 │
+│  Objetivo (Eq. 2):                                              │
+│    min [ ‖corr(S) − I‖² + ‖corr(S,F) − corr(F)‖² ]            │
+│                                                                 │
+│  Restrição (Eq. 3):                                             │
+│    Σ|X_ij| ≤ 1 ∀i  →  cada variável entra em 1 IGC no máximo   │
+└───────────────────────────────┬─────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  7 IGCs VALIDADOS  →  escala [0, 10]                            │
+│   Correlação máxima entre IGCs:    0,048  ✓                     │
+│   Correlação mínima IGC × fator:   0,684  ✓                     │
+└─────────────────────────────────────────────────────────────────┘
 ```
-
----
-
-## Dados disponibilizados
-
-Os dados consolidados do ICBGC (formato `.xlsx`) estão disponíveis para download direto no site do projeto. O arquivo contém:
-
-- **2.294 documentos** de **495 empresas** distintas
-- Período: **outubro de 2018 a novembro de 2024**
-- **54 práticas recomendadas** avaliadas em cada informe
-- Respostas originais e valores numéricos convertidos
-
-A atualização ocorre automaticamente à medida que novos informes são publicados pela CVM.
 
 ---
 
@@ -221,14 +288,16 @@ A atualização ocorre automaticamente à medida que novos informes são publica
 
 ---
 
-## Referências principais
+## Referências
 
+- CVM (2022). *Resolução CVM nº 80*. Diário Oficial da União. Brasil.
+- CVM (2024). *Portal Dados Abertos CVM*. https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/CGVN/DADOS/
 - Hair, J. F., Black, W. C., Babin, B. J., & Anderson, R. E. (2014). *Multivariate Data Analysis* (7ª ed.). Pearson.
+- IBGC (2023). *Código de Melhores Práticas de Governança Corporativa* (6ª ed.).
+- R Core Team (2023). *R: A Language and Environment for Statistical Computing*. R Foundation for Statistical Computing.
 - Scrucca, L. (2013). GA: A Package for Genetic Algorithms in R. *Journal of Statistical Software*, 53(4), 1–37.
 - Scrucca, L. (2017). On some extensions to GA package. *The R Journal*, 9(1), 187–206.
 - Steiner, M. D., & Grieder, S. (2020). EFAtools. *Journal of Open Source Software*, 5(53), 2521.
-- CVM (2024). *Portal Dados Abertos CVM*. https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/CGVN/DADOS/
-- IBGC (2023). *Código de Melhores Práticas de Governança Corporativa* (6ª ed.).
 
 ---
 
@@ -248,9 +317,3 @@ Os autores agradecem pelo financiamento de pesquisa feito pela **Fundação de A
 | **[Simone Fonseca](http://lattes.cnpq.br/5220117639109190)** | [DECAD/ICSA/UFOP](https://icsa.ufop.br/corpo-docente-3) | <simone.fonseca@ufop.edu.br> | Doutora em Administração (Finanças) |
 | **[Yuri Lopes](http://lattes.cnpq.br/1281498889191276)** | UFSJ | <yuri.fnsc.lopes@gmail.com> | Graduação em Engenharia Mecatrônica |
 
----
-
-## Contribuições
-
-Contribuições são bem-vindas! Se você tiver sugestões de melhorias ou
-identificar problemas, abra uma *issue* ou envie um *pull request*.
