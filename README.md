@@ -121,8 +121,6 @@ Este script realiza, em ordem:
 6. **AFE com rotação varimax** — 7 fatores (**Tabela 3**)
 7. Exporta `data/input_GA_scale.RData` para o Script 2
 
-> ⚠️ O script pausa em um `browser()` após imprimir a Tabela 3. Pressione **`c`** no console do RStudio para continuar.
-
 ### Passo 3 — Execute o Script 2 (Algoritmo Genético)
 
 Abra e execute `script_GA_scale.R` com **Ctrl+Shift+S**.
