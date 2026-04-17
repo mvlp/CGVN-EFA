@@ -190,6 +190,7 @@ Os dois scripts devem ser executados **em ordem**. O Script 1 gera um arquivo in
 | Resultados | Pesos, correlações entre IGCs e entre IGCs × fatores | **Tabela 4** no console |
 | Confiabilidade | Alpha de Cronbach por IGC | Impresso no console |
 | Gráficos dos IGCs | Evolução trimestral de cada índice | PDFs em `figs/scale_*.pdf` |
+| Exportação | Salva resultados para uso externo | XLSX em `output/` |
 
 > 💡 **Reproduzindo o artigo vs. rodando do zero:**
 >
