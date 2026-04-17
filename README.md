@@ -109,7 +109,7 @@ cd CGVN-EFA
 
 ### Passo 2 — Execute o Script 1 (AFE)
 
-Abra o RStudio e execute `script_CGVN_EFA_github.R` com **Ctrl+Shift+S** (Source).
+Abra o RStudio e execute `script_CGVN_EFA.R` com **Ctrl+Shift+S** (Source).
 
 Este script realiza, em ordem:
 
