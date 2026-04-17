@@ -91,7 +91,7 @@ A AFE identificou sete dimensões latentes da GC nas empresas brasileiras. Os IG
 CGVN-EFA/
 │
 ├── scripts/
-│   ├── script_CGVN_EFA.R    # Script 1 — Estatísticas descritivas + AFE
+│   ├── script_CGVN_EFA.R           # Script 1 — Estatísticas descritivas + AFE
 │   └── script_GA_scale.R           # Script 2 — Construção dos IGCs via AG
 │
 ├── data/
@@ -101,6 +101,11 @@ CGVN-EFA/
 │   └── loading_cut_off.csv         # Limiares de carga fatorial (Hair et al., 2014)
 │
 ├── figs/                           # Gráficos gerados (PDF/PNG)
+|
+├── output/
+│   ├── IGC_empresas.xlsx          # Série temporal dos IGCs 
+│   ├── loadings.xlsx              # Cargas fatoriais (AFE)
+│   └── pesos_escalas.xlsx         # Matriz de pesos que determinam cada escala
 │
 └── README.md
 ```
