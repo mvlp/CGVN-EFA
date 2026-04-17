@@ -219,19 +219,19 @@ A tabela abaixo lista os resultados numéricos reportados no artigo e como verif
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  DADOS  →  Portal de Dados Abertos CVM (ICBGC)                 │
+│  DADOS  →  Portal de Dados Abertos CVM (ICBGC)                  │
 │             495 empresas │ 2.294 informes │ 54 práticas         │
 └───────────────────────────────┬─────────────────────────────────┘
                                 │
                                 ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │  CONVERSÃO  →  Qualitativo para numérico                        │
-│   "Não se Aplica"=0 │ "Não"=1 │ "Parcialmente"=2 │ "Sim"=3     │
+│   "Não se Aplica"=0 │ "Não"=1 │ "Parcialmente"=2 │ "Sim"=3      │
 └───────────────────────────────┬─────────────────────────────────┘
                                 │
                                 ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│  ADEQUAÇÃO  →  KMO (0,928) e Bartlett (p < 0,001)  ✓           │
+│  ADEQUAÇÃO  →  KMO (0,928) e Bartlett (p < 0,001)  ✓            │
 └───────────────────────────────┬─────────────────────────────────┘
                                 │
                                 ▼
@@ -252,13 +252,13 @@ A tabela abaixo lista os resultados numéricos reportados no artigo e como verif
 ┌─────────────────────────────────────────────────────────────────┐
 │  OTIMIZAÇÃO  →  Algoritmo Genético (GA)                         │
 │                                                                 │
-│  Cromossomo: pesos ∈ {-1, 0, +1} por variável × fator          │
+│  Cromossomo: pesos ∈ {-1, 0, +1} por variável × fator           │
 │                                                                 │
 │  Objetivo (Eq. 2):                                              │
-│    min [ ‖corr(S) − I‖² + ‖corr(S,F) − corr(F)‖² ]            │
+│    min [ ‖corr(S) − I‖² + ‖corr(S,F) − corr(F)‖² ]              │
 │                                                                 │
 │  Restrição (Eq. 3):                                             │
-│    Σ|X_ij| ≤ 1 ∀i  →  cada variável entra em 1 IGC no máximo   │
+│    Σ|X_ij| ≤ 1 ∀i  →  cada variável entra em 1 IGC no máximo    │
 └───────────────────────────────┬─────────────────────────────────┘
                                 │
                                 ▼
