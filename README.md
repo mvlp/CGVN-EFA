@@ -212,7 +212,7 @@ A atualização ocorre automaticamente à medida que novos informes são publica
 	author       = {Marcos Vinicius Lopes Pereira and Camila Teresa Martucheli and Simone Evangelista Fonseca and Yuri Fonseca Lopes},
 	year         = {2024},
 	booktitle    = {Anais do Congresso Interinstitucional de Contabilidade e Controladoria (CINCO)},
-	note 		     = {Evento Online},
+	note 		 = {Evento Online},
 	url          = {https://www.even3.com.br/anais/ii-congresso-interinstitucional-de-contabilidade-e-controladoria-502331/1042664-sete-dimensoes-da-governanca-corporativa-no-brasil--indices-e-disponibilizacao-de-dados},
 	address      = {Santa Maria, RS},
 	ISBN         = {978-65-272-1134-1}
