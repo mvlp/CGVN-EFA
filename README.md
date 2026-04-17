@@ -25,7 +25,9 @@
 - [Metodologia resumida](#metodologia-resumida)
 - [Como citar](#como-citar)
 - [Referências](#referências)
-- [Financiamento e contato](#financiamento-e-contato)
+- [Financiamento](#financiamento)
+- [Contatos](#contatos)
+- [Contribuindo](#contribuindo)
 
 ---
 
@@ -316,4 +318,32 @@ Os autores agradecem pelo financiamento de pesquisa feito pela **Fundação de A
 | **[Camila Martucheli](http://lattes.cnpq.br/9986835732512415)** | [Universo BH](https://universobh.com.br/gestores-de-curso/)  | <camila.martucheli@gmail.com> | Doutora em Administração (Finanças) |
 | **[Simone Fonseca](http://lattes.cnpq.br/5220117639109190)** | [DECAD/ICSA/UFOP](https://icsa.ufop.br/corpo-docente-3) | <simone.fonseca@ufop.edu.br> | Doutora em Administração (Finanças) |
 | **[Yuri Lopes](http://lattes.cnpq.br/1281498889191276)** | UFSJ | <yuri.fnsc.lopes@gmail.com> | Graduação em Engenharia Mecatrônica |
+
+---
+
+## Contribuindo
+
+Contribuições são bem-vindas, especialmente em:
+
+- melhoria da documentação;
+- modularização dos scripts;
+- criação de funções auxiliares;
+- exportação de resultados em formatos mais amigáveis;
+- exemplos reproduzíveis para terceiros.
+
+### Fluxo sugerido
+
+1. faça um fork do repositório;
+2. crie uma branch para sua contribuição;
+3. implemente a alteração;
+4. documente o que foi modificado;
+5. abra um pull request com descrição objetiva.
+
+### Recomendações para contribuições
+
+- preserve compatibilidade com execução por caminhos relativos;
+- evite dependências desnecessárias;
+- prefira alterações incrementais e bem documentadas;
+- inclua comentários claros quando a lógica estatística não for imediata.
+
 
