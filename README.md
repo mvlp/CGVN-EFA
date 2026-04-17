@@ -89,7 +89,7 @@ A AFE identificou sete dimensões latentes da GC nas empresas brasileiras. Os IG
 CGVN-EFA/
 │
 ├── scripts/
-│   ├── script_CGVN_EFA_github.R    # Script 1 — Estatísticas descritivas + AFE
+│   ├── script_CGVN_EFA.R    # Script 1 — Estatísticas descritivas + AFE
 │   └── script_GA_scale.R           # Script 2 — Construção dos IGCs via AG
 │
 ├── data/
@@ -151,7 +151,7 @@ install.packages(c(
 
 Os dois scripts devem ser executados **em ordem**. O Script 1 gera um arquivo intermediário (`.RData`) que alimenta o Script 2.
 
-### Script 1 — `scripts/script_CGVN_EFA_github.R`
+### Script 1 — `scripts/script_CGVN_EFA.R`
 
 **O que faz:** carrega e processa os dados do ICBGC, gera estatísticas descritivas, gráficos de evolução temporal e realiza a Análise Fatorial Exploratória (AFE) com rotação varimax.
 
