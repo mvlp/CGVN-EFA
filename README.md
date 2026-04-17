@@ -26,7 +26,7 @@
 - [Como citar](#como-citar)
 - [Referências](#referências)
 - [Financiamento](#financiamento)
-- [Contatos](#contatos)
+- [Contato](#contato)
 - [Contribuindo](#contribuindo)
 
 ---
