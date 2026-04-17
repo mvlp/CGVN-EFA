@@ -68,7 +68,7 @@ CGVN-EFA/
 │   ├── scale_CINCO2024.RData       # Solução publicada no artigo (IGCs finais)
 │   └── loading_cut_off.csv         # Tabela de limiares de carga (Hair et al., 2014)
 ├── figs/                           # Gráficos gerados (PDF/PNG)
-├── script_CGVN_EFA_github.R        # Script 1: estatísticas descritivas + AFE
+├── script_CGVN_EFA.R        # Script 1: estatísticas descritivas + AFE
 ├── script_GA_scale.R               # Script 2: otimização dos IGCs via AG
 └── README.md
 ```
