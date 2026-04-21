@@ -120,7 +120,7 @@ CGVN-EFA/
 
 ```bash
 git clone https://github.com/mvlp/CGVN-EFA.git
-cd CGVN-EFA
+cd CGVN-EFA/scripts/
 ```
 
 **Se você não usa Git (mais simples):** clique no botão verde **`<> Code`** no topo desta página e depois em **`Download ZIP`**. Extraia a pasta onde preferir e abra os scripts diretamente no RStudio — não é necessário nenhum comando.
